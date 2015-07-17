@@ -1,0 +1,32 @@
+{
+  "name": "zip-wrapper",
+  "version": "0.0.1",
+  "description": "Unzip-wrapper companion.",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run compile",
+    "pretest": "npm run compile",
+    "test": "mocha",
+    "compile": "coffee -c *.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pronebird/zip-wrapper.git"
+  },
+  "keywords": [
+    "zip",
+    "compress",
+    "archive"
+  ],
+  "author": "Andrej Mihajlov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pronebird/zip-wrapper/issues"
+  },
+  "homepage": "https://github.com/pronebird/zip-wrapper#readme",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "fs-extra": "^0.22.1",
+    "mocha": "^2.2.5"
+  }
+}
