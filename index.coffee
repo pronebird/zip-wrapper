@@ -7,15 +7,11 @@ module.exports = (archivePath, options, callback) ->
     target: '',
     excludeRoot: false
 
-  if typeof(options) is 'function'
-    callback = options
-    options = defaults
+  if typeof(options) is 'object'
+    for key, value of defaults
+      options[key] = value  if !options.hasOwnProperty(key)
   else
-    if typeof(options) is 'object'
-      for key, value of defaults
-        options[key] = value  if !options.hasOwnProperty(key)
-    else
-      options = defaults
+    options = defaults
 
   if typeof(callback) isnt 'function'
     return
