@@ -1,5 +1,7 @@
 # zip-wrapper
 
+[![Build Status](https://travis-ci.org/pronebird/zip-wrapper.svg?branch=master)](https://travis-ci.org/pronebird/zip-wrapper)
+
 This package wraps the native 'zip' binary.
 
 ### Usage
