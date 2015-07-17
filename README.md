@@ -29,4 +29,4 @@ zip('/path/to/archive.zip', options, function (err) {
 The following options are available:
 
 * `excludeRoot` -- Whether compressed directory should be a root entry of ZIP file. Defaults to false.
-* `target` -- The target directory. Defaults to the archive's directory.
+* `target` -- The target directory.
