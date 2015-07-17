@@ -4,13 +4,13 @@ This package wraps the native 'zip' binary.
 
 ### Usage
 
-```
+```js
 zip(archivePath, options, function (err) {});
 ```
 
 ### Example
 
-```
+```js
 var zip = require('zip-wrapper');
 
 var options = {
