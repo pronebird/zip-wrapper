@@ -48,10 +48,16 @@ describe 'Tests', ->
         assert.ifError err
         assert.equal contents, helloString
         done()
+        return
+
+      return
+    return
 
   it 'should archive file with root folder', (done) ->
 
-    targetPath = path.join os.tmpdir(), randomId(), 'input'
+    inputDir = 'input'
+
+    targetPath = path.join os.tmpdir(), randomId(), inputDir
     archivePath = path.join os.tmpdir(), randomId(), 'output-2.zip'
 
     helloFile = 'hello.txt'
@@ -75,8 +81,13 @@ describe 'Tests', ->
     zip archivePath, options, (err) ->
       assert.ifError err
 
-      printArchivedFile archivePath, path.join('input', helloFile), (err, contents) ->
+      printArchivedFile archivePath, path.join(inputDir, helloFile), (err, contents) ->
         assert.ifError err
         assert.equal contents, helloString
         done()
+        return
 
+      return
+    return
+
+  return
