@@ -24,8 +24,8 @@ module.exports = (archivePath, options, callback) ->
     source = '.'
     target = options.target
   else
-    target = path.dirname options.target
     source = path.basename options.target
+    target = path.dirname options.target
   
   archivePath = path.relative target, archivePath
 
