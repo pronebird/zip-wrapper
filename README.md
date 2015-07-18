@@ -1,8 +1,17 @@
 # zip-wrapper
 
+[![npm version](http://img.shields.io/npm/v/zip-wrapper.svg?style=flat)](https://npmjs.org/package/zip-wrapper "View this project on npm")
 [![Build Status](https://travis-ci.org/pronebird/zip-wrapper.svg?branch=master)](https://travis-ci.org/pronebird/zip-wrapper)
 
 This package wraps the native 'zip' binary.
+
+### Install
+
+Available on npm:
+
+```sh
+npm install zip-wrapper
+```
 
 ### Usage
 
