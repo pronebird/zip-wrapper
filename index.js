@@ -9,10 +9,13 @@
   fs = require('fs');
 
   module.exports = function(archivePath, options, callback) {
-    var cmd, defaults, key, source, target, value;
+    var cmd, defaults, escape, key, source, target, value;
     defaults = {
       target: '',
       excludeRoot: false
+    };
+    escape = function(cmd) {
+      return '\'' + cmd.replace(/\'/g, "'\\''") + '\'';
     };
     if (typeof options === 'object') {
       for (key in defaults) {
@@ -39,7 +42,7 @@
       target = path.dirname(options.target);
     }
     archivePath = path.relative(target, archivePath);
-    cmd = "cd \"" + target + "\" && zip -q -r \"" + archivePath + "\" \"" + source + "\"";
+    cmd = "cd " + (escape(target)) + " && zip -q -r " + (escape(archivePath)) + " " + (escape(source));
     exec(cmd, function(err, stdout) {
       callback(err);
     });
